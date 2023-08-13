@@ -1,250 +1,145 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mapbox Autocomplete</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+  <link href="api.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+</head>
+<body>
+
+<input type="text" id="location-input" placeholder="Enter a location">
+
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYW51c2hrYTE3IiwiYSI6ImNsbDQ2cm9tMjAzbDkzZmxiNmtpZ2l3ZWsifQ.X42lWwCQbxecQziN-o5Lvw';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-74.5, 40],
+    zoom: 9
+  });
+
+  const input = document.getElementById('location-input');
+  const suggestionsContainer = document.createElement('div');
+  suggestionsContainer.className = 'suggestions';
+  input.parentNode.appendChild(suggestionsContainer);
+
+  input.addEventListener('input', async (e) => {
+    const query = e.target.value;
+
+    // Call Mapbox Geocoding API for autocomplete suggestions
+    const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`);
+    const data = await response.json();
+
+    // Clear previous suggestions
+    suggestionsContainer.innerHTML = '';
+
+    // Display autocomplete suggestions
+    data.features.forEach((feature) => {
+      const suggestion = document.createElement('div');
+      suggestion.className = 'suggestion';
+      suggestion.textContent = feature.place_name;
+      suggestionsContainer.appendChild(suggestion);
+
+      suggestion.addEventListener('click', () => {
+        input.value = feature.place_name;
+        // Use feature.center for your mapping purposes
+      });
+    });
+  });
+</script>
+
+<style>
+  .suggestions {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 999;
+  }
+  .suggestion {
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+
+</body>
+</html> -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Tiffin Wala</title>
-    <link rel="icon" href="images/favicon.ico" />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="utf-8" />
+    <title>Mapbox Autocomplete</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Ubuntu:wght@300&display=swap"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- css scripts -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/70232a042e.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap scripts -->
+    <link href="api.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
   </head>
-
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-logo" src="/images/favicon.ico" href=""></a>
-        <a class="navbar-brand" href=""> Tiffin Wala </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#end"> Contact </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#feature"> About US </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tiffins-page"> Tiffins </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=""> Add Address </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <section id="landing-page">
-      <div class="row">
-        <img class="landing-bg" src="/images/landing-page.jpg" alt="" />
-        <div class="col-lg-6 landing-heading">
-          <h1>Anytime Tiffin</h1>
-          <p>Get Homiee Tiffin in Your Hand</p>
-          <button type="button" class="btn btn-outline-dark btn-lg">
-            Log in
-          </button>
-          <button type="button" class="btn btn-outline-dark btn-lg">
-            Sign Up
-          </button>
-        </div>
-        <div class="col-lg-6 landing-heading">
-          <img class="landing-img" src="/images/img2.jpg" alt="" />
-        </div>
-      </div>
-    </section>
+    <input type="text" id="location-input" placeholder="Enter a location" />
+    
 
-    <!-- Page-2 -->
-    <section id="feature">
-      <img class="feature-bg" src="/images/Tiffin Wala.jpg" alt="" />
-      <div class="row">
-        <div class="col-lg-6 description">
-          <h1>images</h1>
-        </div>
-        <div class="col-lg-6 description">
-          <h1>Why Us</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            similique placeat maiores, velit omnis explicabo quo doloremque,
-            fuga impedit enim repellat et consequatur corporis dolore at est
-            recusandae exercitationem ipsa?
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Page-3 -->
-    <section id="tiffins-page">
-      <h1>Tiffins</h1>
-      <div class="row">
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-      </div>
-      <div class="tiffins-btn">
-        <button type="button" class="btn btn-outline-dark">See More</button>
-      </div>
-    </section>
+    
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYW51c2hrYTE3IiwiYSI6ImNsbDQ2cm9tMjAzbDkzZmxiNmtpZ2l3ZWsifQ.X42lWwCQbxecQziN-o5Lvw';
 
-    <hr />
-    <!-- cart -->
-    <section id="order">
-      <div class="row">
-        <div class="col-lg-3 tiffin-id">
-          <img class="order-img" src="/images/img1.jpg" alt="" />
-        </div>
-        <div class="col-lg-6 tiffin-id">
-          <h3>Bangali Tiffin</h3>
-          <p></p>
-          Address
-        </div>
-      </div>
-    </section>
-      <section id="card">
-        <div class="container">
-          <header>
-            <h3>Your Shopping Cart</h3>
-            <div class="shopping">
-              <img src="/images/shopping.svg" />
-              <span class="quantity">0</span>
-            </div>
-          </header>
+        const input = document.getElementById('location-input');
+        const suggestionsContainer = document.createElement('div');
+        suggestionsContainer.className = 'suggestions';
+        input.parentNode.appendChild(suggestionsContainer);
 
-          <div class="list"></div>
-        </div>
-        <div class="card">
-          <h1>Card</h1>
-          <ul class="listCard"></ul>
-          <div class="checkOut">
-            <div class=" total">
-            <button type="button" class="btn btn-outline-dark btn-lg">
-            </button></div>
-            <div class="closeShopping">Close</div>
-          </div>
-        </div>
-      </section>
+        
+        input.addEventListener('input', async (e) => {
+          const query = e.target.value;
 
-   
+          // Call Mapbox Geocoding API for autocomplete suggestions
+          const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`);
+          const data = await response.json();
 
-    <hr />
-    <!-- subscription -->
-    <section id="pricing">
-      <h2>A Plan for Everybody</h2>
-      <p>Affordable price plans for your tiffin.</p>
-      <div class="row">
-        <div class="pricing-column col-lg-4 col-md-6">
-          <div class="sub-panel">
-            <div class="sub-panel-header">
-              <h3>Monthly subscription</h3>
-            </div>
-            <div class="cardy-body">
-              <h2>$10 /mo</h2>
-              <p>5 Matches Per Day</p>
-              <p>10 Messages Per Day</p>
-              <p>Unlimited App Usage</p>
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-dark btn-block"
-              >
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
+          // Clear previous suggestions
+          suggestionsContainer.innerHTML = '';
 
-        <div class="pricing-column col-lg-4 col-md-6">
-          <div class="sub-panel">
-            <div class="sub-panel-header">
-              <h3>Monthly luxury subscription</h3>
-            </div>
-            <div class="cardy-body">
-              <h2>$49 / mo</h2>
-              <p>Unlimited Matches</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
-              <button type="button" class="btn btn-lg btn-block btn-dark">
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-column col-lg-4">
-          <div class="sub-panel">
-            <div class="sub-panel-header">
-              <h3>3 Month subscription</h3>
-            </div>
-            <div class="sub-panel-body">
-              <h2>$99 / mo</h2>
-              <p>Unlimited Matches</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
-              <button type="button" class="btn btn-dark">Sign Up</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          // Display autocomplete suggestions
+          data.features.forEach((feature) => {
+            const suggestion = document.createElement('div');
+            suggestion.className = 'suggestion';
+            suggestion.textContent = feature.place_name;
+            suggestionsContainer.appendChild(suggestion);
 
-    <section id="footer">
-      <div class="row">
-        <div class="col-lg-6 copyright">
-          <h1>Tiffin Wala</h1>
-          <p>©️Tiffin Wala</p>
-        </div>
-        <div class="col-lg-6 contact-links">
-          <h4>Contact Us</h4>
-          <!-- <a class="btn" href="mailto:tiffinwala@gmail.com">
-            tiffinwala@gmail.com -->
-          <!-- </a> -->
-          <i
-            class="btn footer-icon fa-brands fa-envolope"
-            href="mailto:tiffinwala@gmail.com"
-          ></i>
-          <i class="footer-icon fa-brands fa-twitter" href=""></i>
-          <i class="footer-icon fa-brands fa-instagram" href=""></i>
-          <i class="footer-icon fa-brands fa-linkedin" href=""></i>
-        </div>
-      </div>
-    </section>
-    <script src="app.js"></script>
+            suggestion.addEventListener('click', () => {
+              input.value = feature.place_name;
+              // Use feature.center for your mapping purposes
+            }
+            );
+          }
+          );
+        }
+        );
+      </script>
+
+
+    <style>
+      .suggestions {
+        position: absolute;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        background-color: white;
+        border: 1px solid #ccc;
+        z-index: 999;
+      }
+      .suggestion {
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
   </body>
 </html>
