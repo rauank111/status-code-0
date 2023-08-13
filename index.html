@@ -1,206 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Tiffin Wala</title>
-    <link rel="icon" href="images/favicon.ico">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- css scripts -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/70232a042e.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap scripts -->
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+    
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <img src="image/shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
 
-  <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-logo" src="/images/favicon.ico" href=""></a>
-        <a class="navbar-brand" href=""> Tiffin Wala </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#end"> Contact </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#feature"> About US </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tiffins-page"> Tiffins </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=""> Add Address </a>
-            </li>
-          </ul>
+        <div class="list">
+          
         </div>
-      </div>
-    </nav>
-    <section id="landing-page">
-      <div class="row">
-        <img class="landing-bg" src="/images/landing-page.jpg" alt="" />
-        <div class="col-lg-6 title">
-          <h1>Anytime Tiffin</h1>
-          <p>Get Homiee Tiffin in Your Hand</p>
-          <button type="button" class="btn btn-outline-dark btn-lg">
-            Log in
-          </button>
-          <button type="button" class="btn btn-outline-dark btn-lg">
-            Sign Up
-          </button>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
         </div>
-        <div class="col-lg-6 title">
-          <img class="landing-img" src="/images/img2.jpg" alt="" />
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!-- Page-2 -->
-    <section id="feature">
-      <img class="feature-bg" src="/images/Tiffin Wala.jpg" alt="" />
-      <div class="row">
-        <div class="col-lg-6 description">
-          <h1>images</h1>
-        </div>
-        <div class="col-lg-6 description">
-          <h1>Why Us</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            similique placeat maiores, velit omnis explicabo quo doloremque,
-            fuga impedit enim repellat et consequatur corporis dolore at est
-            recusandae exercitationem ipsa?
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Page-3 -->
-    <section id="tiffins-page">
-      <h1>Tiffins</h1>
-      <div class="row">
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-        <div class="col-lg-4 tiffins">
-          <img class="tiffins-img" src="/images/img1.jpg" alt="" />
-          <h4 class="tiffins-name">tiffin</h4>
-        </div>
-      </div>
-      <div class="tiffins-btn">
-        <button type="button" class="btn btn-outline-dark">See More</button>
-      </div>
-    </section>
-
-    <hr>
-    <!-- subscription -->
-    <section id="pricing">
-      <h2>A Plan for Everybody</h2>
-      <p>Affordable price plans for your tiffin.</p>
-      <div class="row">
-        <div class="pricing-column col-lg-4 col-md-6">
-          <div class="card">
-            <div class="card-header">
-              <h3>Monthly subscription</h3>
-            </div>
-            <div class="cardy-body">
-              <h2>$10 /mo</h2>
-              <p>5 Matches Per Day</p>
-              <p>10 Messages Per Day</p>
-              <p>Unlimited App Usage</p>
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-dark btn-block"> Sign Up</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-column col-lg-4 col-md-6">
-          <div class="card">
-            <div class="card-header">
-              <h3>Monthly luxury subscription </h3>
-            </div>
-            <div class="cardy-body">
-              <h2>$49 / mo</h2>
-              <p>Unlimited Matches</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
-              <button type="button" class="btn btn-lg btn-block btn-dark">
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-column col-lg-4">
-          <div class="card">
-            <div class="card-header">
-              <h3>3 Month subscription</h3>
-            </div>
-            <div class="card-body">
-              <h2>$99 / mo</h2>
-              <p>Unlimited Matches</p>
-              <p>Unlimited Messages</p>
-              <p>Unlimited App Usage</p>
-              <button type="button" class="btn btn-dark">Sign Up</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="footer">
-      <div class="row">
-        <div class="col-lg-6 copyright">
-          <h1>Tiffin Wala</h1>
-          <p>©️Tiffin Wala</p>
-        </div>
-        <div class="col-lg-6 contact-links">
-          <h4>Contact Us</h4>
-          <!-- <a class="btn" href="mailto:tiffinwala@gmail.com">
-            tiffinwala@gmail.com -->
-          <!-- </a> -->
-          <i
-            class="btn footer-icon fa-brands fa-envolope"
-            href="mailto:tiffinwala@gmail.com"
-          ></i>
-          <i class="footer-icon fa-brands fa-twitter" href=""></i>
-          <i class="footer-icon fa-brands fa-instagram" href=""></i>
-          <i class="footer-icon fa-brands fa-linkedin" href=""></i>
-        </div>
-      </div>
-    </section>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>
