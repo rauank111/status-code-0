@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu';
+    text-align: justify;
+    background-color: #E9E8E9;
+}
+.navbar{
+    padding:  0;
+}
+.navbar-brand{
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'montserrat';
+}
+
+.container-fluid{
+    padding: 0 5%;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'montserrat' ;
+}
+
+h2{
+   font-size: xx-large;
+    font-weight: 700;
+} 
+
+p{
+    font-size: large;
+    font-weight: 600;
+}
+
+.title{
+    padding: 20% 10% 10% 10% ;
+   line-height: 20px;
+   letter-spacing: 2px;
+
+}
+
+#landing-page{
+    margin: 0;
+    width: 100%;
+}
+.landing-bg{
+    position: absolute;
+    z-index: -1;    
+    width: 100%;
+    height: 100%;
+
+   
+}
+
+.landing-img{
+    padding-bottom: 10%;
+    image-orientation:from-image;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+
+@media (max-width:1020px){
+    .title{
+        text-align: center;
+    }
+
+    .landing-bg{
+        
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Page-2 */
+
+.description{
+    padding: 10% 10% ;
+    /* margin-bottom: 0; */
+}
+
+.feature-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    z-index: -1;
+}
+
+#feature{
+    margin: 0;
+    width: 100%;
+}
+
+/* .row{
+    margin-bottom: 10%;
+} */
+
+@media (max-width:1020px){
+    .description{
+        text-align: center;
+    }
+
+    .landing-bg{
+        
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Pae-3 */
+#tiffins-page{
+    margin: 0;
+    padding: 15% 10% 10%;
+}
+
+.tiffins{
+    text-align: center;
+    padding: 5% 5%;
+}
+
+.tiffins-btn{
+    text-align: center;
+}
+
+.tiffins-img{
+    width: 100%;
+    border-radius: 10%;
+   
+    box-shadow:10px 10px 8px #888888;
+}
+
+.tiffins-name{
+    padding-top: 5%;
+}
+
+/* subscription */
+#pricing {
+    padding: 7% 12%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2rem;
+
+}
+
+.card {
+    padding-bottom: 3%;
+    font-family: 'ubuntu';
+    box-shadow:10px 10px 8px #888888;
+}
+
+.pricing-column {
+    padding: 3% 2%;
+}
+
+
+/* Footer */
+#footer{
+    padding: 2% 5%;
+    background-color:#FFB100 ;
+}
+
+
+
+.contact-links{
+    text-align:right;
+}
