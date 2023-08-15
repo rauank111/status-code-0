@@ -1,1 +1,13 @@
+![photo_13_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/f1d71754-a651-4fa9-8886-70e3c861e157)
+![photo_12_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/7e0f050b-a1cb-4dab-a6af-43ad1d93a2ec)
+![photo_11_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/2b5e220b-eb4c-4cc5-84d0-20ec17118fd4)
+![photo_10_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/0796ae18-2fc5-413d-9563-65a536d74de6)
+![photo_9_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/6f5b31ab-14f8-42c0-88b3-00de5071d5e7)
+![photo_7_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/de26ce8a-3673-4a09-97fd-1148ada940dc)
+![photo_6_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/33ce22fa-5a3b-4555-8225-881c81e83436)
+![photo_5_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/3a65aae5-2b17-494f-8941-2ec5cdef1120)
+![photo_4_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/b99a84d0-f510-44da-830b-9f75477b28cc)
+![photo_3_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/21e12e70-bb7f-4f7f-af56-992ee3ef0c80)
+![photo_2_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/34554dd8-45db-422b-be19-d55e30f43b56)
+![photo_1_2023-08-15_19-13-32](https://github.com/rauank111/status-code-0/assets/122619616/7df93db3-acce-4b92-88e8-e9d079baaa67)
 
